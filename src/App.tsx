@@ -1,11 +1,10 @@
-function App() {
+import { Router } from './Router'
+import { BrowserRouter } from 'react-router-dom'
+
+export default function App() {
   return (
-    <div className="m-2 flex flex-col">
-      <h1 className="m-3 mx-1 font-baloo text-3xl text-black">
-        Hello World yhis sfd
-      </h1>
-    </div>
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
   )
 }
-
-export default App
