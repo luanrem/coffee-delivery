@@ -9,7 +9,12 @@
 }
 
 @layer base {
+  :root {
+    --purple: 128 71 248;
+    --purple-dark: 75 41 149;
+    --purple-light: 235 229 249;
+  },
   html {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
   }
 }
