@@ -11,6 +11,8 @@ export default {
         purple: 'rgba(var(--purple))',
         'purple-dark': 'rgba(var(--purple-dark))',
         'purple-light': 'rgba(var(--purple-light))',
+        'yellow-dark': 'rgba(var(--yellow-dark))',
+        'yellow-light': 'rgba(var(--yellow-light))',
       },
     },
   },
