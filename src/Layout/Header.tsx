@@ -6,7 +6,7 @@ import CheckoutCar from '@/components/icons/CheckoutCar'
 export default function Header() {
   return (
     <>
-      <header className="flex h-24 items-center justify-between px-40">
+      <header className="flex h-24 items-center justify-between px-32">
         <CoffeeLogo />
         <div className="flex gap-3">
           <button className="bg-purple-light flex h-9 w-auto items-center gap-1 rounded-md px-2 py-2 font-roboto">

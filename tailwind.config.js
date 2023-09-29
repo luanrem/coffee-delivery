@@ -14,6 +14,9 @@ export default {
         'yellow-dark': 'rgba(var(--yellow-dark))',
         'yellow-light': 'rgba(var(--yellow-light))',
       },
+      backgroundImage: {
+        'home-section': "url('/src/assets/home-background.png')",
+      },
     },
   },
   plugins: [],
