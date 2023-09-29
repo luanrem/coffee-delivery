@@ -3,6 +3,7 @@ import coffeePresentation from '../assets/coffee-presentation.png'
 import IconHome2 from '@/components/icons/IconHome2'
 import IconHome3 from '@/components/icons/IconHome3'
 import IconHome4 from '@/components/icons/IconHome4'
+import CoffeeCard from '@/components/CoffeeCard'
 
 export default function Home() {
   return (
@@ -44,7 +45,12 @@ export default function Home() {
           className="h-72 lg:h-96"
         />
       </section>
-      <section />
+      <section className="flex h-auto flex-col items-start justify-start px-32 lg:flex-nowrap">
+        <h2 className="font-baloo text-3xl font-extrabold">Nossos cafés</h2>
+        <br />
+        <br />
+        <CoffeeCard />
+      </section>
     </>
   )
 }
