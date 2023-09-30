@@ -1,5 +1,5 @@
-import IconHome1 from '@/components/icons/IconHome1'
 import coffeePresentation from '../assets/coffee-presentation.png'
+import IconHome1 from '@/components/icons/IconHome1'
 import IconHome2 from '@/components/icons/IconHome2'
 import IconHome3 from '@/components/icons/IconHome3'
 import IconHome4 from '@/components/icons/IconHome4'
@@ -8,7 +8,7 @@ import CoffeeCard from '@/components/CoffeeCard'
 export default function Home() {
   return (
     <>
-      <section className="bg-home-section flex h-auto flex-wrap-reverse items-center justify-center gap-14 px-32 lg:h-[34rem] lg:flex-nowrap">
+      <section className="mb-10 flex flex-wrap-reverse items-center justify-center gap-14 bg-home-section bg-contain px-32 pb-4 lg:mb-0 lg:h-[34rem] lg:flex-nowrap">
         <div className="flex h-auto flex-col gap-4">
           <h2 className="font-baloo text-5xl font-extrabold">
             Encontre o café perfeito para qualquer hora do dia

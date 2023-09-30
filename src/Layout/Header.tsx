@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom'
-import CoffeeLogo from '../components/icons/CoffeeLogo'
-import { HiMiniMapPin } from 'react-icons/hi2'
+import CoffeeLogo from '@/components/icons/CoffeeLogo'
 import CheckoutCar from '@/components/icons/CheckoutCar'
+import { HiMiniMapPin } from 'react-icons/hi2'
 
 export default function Header() {
   return (
@@ -9,13 +9,13 @@ export default function Header() {
       <header className="flex h-24 items-center justify-between px-32">
         <CoffeeLogo />
         <div className="flex gap-3">
-          <button className="bg-purple-light flex h-9 w-auto items-center gap-1 rounded-md px-2 py-2 font-roboto">
-            <HiMiniMapPin className="text-purple text-2xl" />
+          <button className="flex h-9 w-auto items-center gap-1 rounded-md bg-purple-light px-2 py-2 font-roboto">
+            <HiMiniMapPin className="text-2xl text-purple" />
             <p className="text-purple-dark">Porto Alegre, RS</p>
           </button>
-          <button className="bg-yellow-light relative flex h-9 w-9 items-center justify-center rounded-md">
+          <button className="relative flex h-9 w-9 items-center justify-center rounded-md bg-yellow-light">
             <CheckoutCar />
-            <div className="bg-yellow-dark absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full">
+            <div className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-yellow-dark">
               <span className="font-roboto text-xs font-bold text-white">
                 3
               </span>
