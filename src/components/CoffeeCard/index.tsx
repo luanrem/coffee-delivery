@@ -1,5 +1,6 @@
 import Picture from '../../assets/coffeeImg/ExpressoTradicional.png'
 import CheckoutCar from '../icons/CheckoutCar'
+import { BiPlus, BiMinus } from 'react-icons/bi'
 
 export default function CoffeeCard() {
   return (
@@ -14,20 +15,24 @@ export default function CoffeeCard() {
           O tradicional café feito com água quente e grãos moídos
         </p>
       </div>
-      <footer className="flex w-full justify-between px-5 pb-6">
-        <div className="flex items-center justify-start gap-1">
-          <p className="text-base-subtitle">R$</p>
+      <footer className="flex w-full justify-between gap-2 px-5 pb-6">
+        <div className="flex grow items-center justify-start gap-1">
+          <p className="text-base-subtitle font-roboto text-sm">R$</p>
           <span className="text-base-subtitle font-baloo text-2xl font-extrabold">
             9,90
           </span>
         </div>
-        <div className="flex">
-          <button>-</button>
-          <p>1</p>
-          <button>+</button>
+        <div className="bg-base-button flex h-10 items-center gap-2 rounded-md px-2">
+          <button className="text-purple hover:text-purple-dark flex items-center justify-center">
+            <BiMinus size="20" />
+          </button>
+          <p className="font-roboto text-base">10</p>
+          <button className="text-purple hover:text-purple-dark flex items-center justify-center">
+            <BiPlus size="20" />
+          </button>
         </div>
-        <button>
-          <CheckoutCar />
+        <button className="bg-purple-dark hover:bg-purple-dark/80 flex h-10 w-10 items-center justify-center rounded-md transition-colors">
+          <CheckoutCar color="white" />
         </button>
       </footer>
     </div>
