@@ -1,10 +1,10 @@
-import Picture from '../../assets/coffeeImg/ExpressoTradicional.png'
+import Picture from '@/assets/coffeeImg/ExpressoTradicional.png'
 import CheckoutCar from '../icons/CheckoutCar'
 import { BiPlus, BiMinus } from 'react-icons/bi'
 
 export default function CoffeeCard() {
   return (
-    <div className="flex h-80 w-64 flex-col items-center justify-between rounded-md rounded-bl-[36px] rounded-tr-[36px] bg-base-card">
+    <div className="mb-2 flex h-80 w-64 flex-col items-center justify-between rounded-md rounded-bl-[36px] rounded-tr-[36px] bg-base-card">
       <div className="relative -top-6 flex flex-col items-center justify-start gap-3 px-5">
         <img src={Picture} alt="" className="w-32" />
         <p className="rounded-xl bg-yellow-light p-1 px-2 font-roboto text-xs font-bold text-yellow-dark">
@@ -22,7 +22,7 @@ export default function CoffeeCard() {
             19,90
           </span>
         </div>
-        <div className="flex h-10 items-center gap-2 rounded-md bg-base-button px-2">
+        <div className="flex h-10 items-center gap-1 rounded-md bg-base-button px-2">
           <button className="flex items-center justify-center text-purple hover:text-purple-dark">
             <BiMinus size="20" />
           </button>
@@ -31,7 +31,7 @@ export default function CoffeeCard() {
             <BiPlus size="20" />
           </button>
         </div>
-        <button className="flex h-10 w-10 items-center justify-center rounded-md bg-purple-dark transition-colors hover:bg-purple-dark/80">
+        <button className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-purple-dark transition-colors hover:bg-purple-dark/80">
           <CheckoutCar color="white" />
         </button>
       </footer>

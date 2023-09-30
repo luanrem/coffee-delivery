@@ -7,7 +7,7 @@ import CoffeeCard from '@/components/CoffeeCard'
 import { useGetCoffee } from '@/hooks/coffee'
 
 export default function Home() {
-  const { data: coffeeList } = useGetCoffee()
+  const { data: coffeeList, isFetching } = useGetCoffee()
 
   return (
     <>
@@ -52,7 +52,13 @@ export default function Home() {
         <h2 className="font-baloo text-3xl font-extrabold">Nossos cafés</h2>
         <br />
         <br />
-        <CoffeeCard />
+        <div className="flex flex-wrap gap-8">
+          {isFetching ? (
+            <h1>Loading</h1>
+          ) : (
+            coffeeList?.map((coffee) => <CoffeeCard key={coffee.id} />)
+          )}
+        </div>
       </section>
     </>
   )
