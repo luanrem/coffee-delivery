@@ -4,8 +4,11 @@ import IconHome2 from '@/components/icons/IconHome2'
 import IconHome3 from '@/components/icons/IconHome3'
 import IconHome4 from '@/components/icons/IconHome4'
 import CoffeeCard from '@/components/CoffeeCard'
+import { useGetCoffee } from '@/hooks/coffee'
 
 export default function Home() {
+  const { data: coffeeList } = useGetCoffee()
+
   return (
     <>
       <section className="mb-10 flex flex-wrap-reverse items-center justify-center gap-14 bg-home-section bg-contain px-32 pb-4 lg:mb-0 lg:h-[34rem] lg:flex-nowrap">
