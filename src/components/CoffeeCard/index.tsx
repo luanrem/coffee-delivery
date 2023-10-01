@@ -1,25 +1,39 @@
-import Picture from '@/assets/coffeeImg/ExpressoTradicional.png'
+import Picture from '../../assets/coffeeImg/Arabe.png'
 import CheckoutCar from '../icons/CheckoutCar'
 import { BiPlus, BiMinus } from 'react-icons/bi'
 
-export default function CoffeeCard() {
+interface CoffeeCardProps {
+  name: string
+  description: string
+  value: number
+  tags: string[]
+  pictureUrl: string
+}
+
+export default function CoffeeCard({
+  name,
+  description,
+  value,
+  tags,
+  pictureUrl,
+}: CoffeeCardProps) {
   return (
     <div className="mb-2 flex h-80 w-64 flex-col items-center justify-between rounded-md rounded-bl-[36px] rounded-tr-[36px] bg-base-card">
       <div className="relative -top-6 flex flex-col items-center justify-start gap-3 px-5">
-        <img src={Picture} alt="" className="w-32" />
+        <img src={Picture} alt={name} className="w-32" />
         <p className="rounded-xl bg-yellow-light p-1 px-2 font-roboto text-xs font-bold text-yellow-dark">
           TRADICIONAL
         </p>
-        <h3 className="font-baloo text-xl font-bold">Expresso Tradicional</h3>
+        <h3 className="font-baloo text-xl font-bold">{name}</h3>
         <p className="text-center font-roboto text-sm text-base-label">
-          O tradicional café feito com água quente e grãos moídos
+          {description}
         </p>
       </div>
       <footer className="flex w-full justify-between gap-2 px-5 pb-6">
         <div className="flex grow items-center justify-start gap-1">
           <p className="font-roboto text-sm text-base-subtitle">R$</p>
           <span className="font-baloo text-2xl font-extrabold text-base-subtitle">
-            19,90
+            {value}
           </span>
         </div>
         <div className="flex h-10 items-center gap-1 rounded-md bg-base-button px-2">

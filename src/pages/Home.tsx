@@ -56,7 +56,16 @@ export default function Home() {
           {isFetching ? (
             <h1>Loading</h1>
           ) : (
-            coffeeList?.map((coffee) => <CoffeeCard key={coffee.id} />)
+            coffeeList?.map((coffee) => (
+              <CoffeeCard
+                pictureUrl={coffee.pictureUrl}
+                name={coffee.name}
+                description={coffee.description}
+                tags={coffee.tags}
+                value={coffee.value}
+                key={coffee.id}
+              />
+            ))
           )}
         </div>
       </section>
