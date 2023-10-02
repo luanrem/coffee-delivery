@@ -1,4 +1,3 @@
-import Picture from '../../assets/coffeeImg/Arabe.png'
 import CheckoutCar from '../icons/CheckoutCar'
 import { BiPlus, BiMinus } from 'react-icons/bi'
 
@@ -20,7 +19,7 @@ export default function CoffeeCard({
   return (
     <div className="mb-2 flex h-80 w-64 flex-col items-center justify-between rounded-md rounded-bl-[36px] rounded-tr-[36px] bg-base-card">
       <div className="relative -top-6 flex flex-col items-center justify-start gap-3 px-5">
-        <img src={Picture} alt={name} className="w-32" />
+        <img src={pictureUrl} alt={name} className="w-32" />
         <p className="rounded-xl bg-yellow-light p-1 px-2 font-roboto text-xs font-bold text-yellow-dark">
           TRADICIONAL
         </p>
