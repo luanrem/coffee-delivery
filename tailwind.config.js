@@ -21,6 +21,14 @@ export default {
         'base-title': '#272221',
         'base-button': '#E6E5E5',
       },
+      fontSize: {
+        '2xs': '0.625rem',
+        //       font-size: 0.75rem/* 12px */;
+        // line-height: 1rem/* 16px */;
+      },
+      lineHeight: {
+        '2xs': '1rem',
+      },
       backgroundImage: {
         'home-section': "url('/src/assets/home-background.png')",
       },

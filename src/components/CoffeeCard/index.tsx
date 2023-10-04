@@ -17,12 +17,19 @@ export default function CoffeeCard({
   pictureUrl,
 }: CoffeeCardProps) {
   return (
-    <div className="mb-2 flex h-80 w-64 flex-col items-center justify-between rounded-md rounded-bl-[36px] rounded-tr-[36px] bg-base-card">
+    <div className="mb-2 flex min-h-min w-64 flex-col items-center justify-between rounded-md rounded-bl-[36px] rounded-tr-[36px] bg-base-card">
       <div className="relative -top-6 flex flex-col items-center justify-start gap-3 px-5">
         <img src={pictureUrl} alt={name} className="w-32" />
-        <p className="rounded-xl bg-yellow-light p-1 px-2 font-roboto text-xs font-bold text-yellow-dark">
-          TRADICIONAL
-        </p>
+        <div className="flex flex-wrap justify-center gap-1">
+          {tags.map((tag, index) => (
+            <p
+              key={String(index) + tag}
+              className="text-2xs rounded-xl bg-yellow-light p-1 px-2 font-roboto font-bold text-yellow-dark"
+            >
+              {tag.toUpperCase()}
+            </p>
+          ))}
+        </div>
         <h3 className="font-baloo text-xl font-bold">{name}</h3>
         <p className="text-center font-roboto text-sm text-base-label">
           {description}
