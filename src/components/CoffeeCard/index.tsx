@@ -39,7 +39,7 @@ export default function CoffeeCard({
         <div className="flex grow items-center justify-start gap-1">
           <p className="font-roboto text-sm text-base-subtitle">R$</p>
           <span className="font-baloo text-2xl font-extrabold text-base-subtitle">
-            {value}
+            {value.toFixed(2).replace('.', ',')}
           </span>
         </div>
         <div className="flex h-10 items-center gap-1 rounded-md bg-base-button px-2">
