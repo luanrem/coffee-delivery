@@ -17,6 +17,6 @@
     --yellow-light: 241 233 201;
   },
   html {
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", system-ui, sans-serif;
   }
 }
