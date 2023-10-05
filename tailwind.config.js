@@ -2,12 +2,10 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    fontFamily: {
-      baloo: ['"Baloo 2"', 'cursive'],
-    },
     extend: {
       fontFamily: {
-        roboto: ['Roboto', 'sans-serif'],
+        baloo: ['"Baloo 2"', 'cursive'],
+        roboto: ['Roboto', 'system-ui', 'sans-serif'],
       },
       colors: {
         'purple-dark': '#4B2995',
