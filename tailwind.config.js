@@ -15,6 +15,7 @@ export default {
         yellow: '#DBAC2C',
         'yellow-light': '#F1E9C9',
         'base-card': '#F3F2F2',
+        'base-input': '#EDEDED',
         'base-text': '#574F4D',
         'base-label': '#8D8686',
         'base-subtitle': '#403937',
