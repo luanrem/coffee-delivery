@@ -1,4 +1,4 @@
-import Input from '@/components/Input'
+import { Input } from '@/components/Input'
 import SelectedCoffee from '@/components/SelectedCoffee'
 import { PiMapPinLineLight } from 'react-icons/pi'
 
@@ -17,8 +17,33 @@ export default function Checkout() {
               </p>
             </div>
           </div>
-          <form action="submit">
-            <Input type="text" placeholder="CEP" />
+          <form action="submit" className="flex flex-wrap gap-4">
+            <Input.Root className="w-52">
+              <Input.Control id="CEP" type="text" placeholder="CEP" />
+            </Input.Root>
+            <Input.Root className="w-full">
+              <Input.Control id="Rua" type="text" placeholder="Rua" />
+            </Input.Root>
+            <Input.Root className="w-52">
+              <Input.Control id="Número" type="number" placeholder="Número" />
+            </Input.Root>
+            <Input.Root className="grow">
+              <Input.Control
+                id="Complemento"
+                type="text"
+                placeholder="Complemento"
+              />
+              <Input.Sulfix>Opcional</Input.Sulfix>
+            </Input.Root>
+            <Input.Root className="w-52">
+              <Input.Control id="Bairro" type="text" placeholder="Bairro" />
+            </Input.Root>
+            <Input.Root className="grow">
+              <Input.Control id="Cidade" type="text" placeholder="Cidade" />
+            </Input.Root>
+            <Input.Root className="w-16">
+              <Input.Control id="UF" type="text" placeholder="UF" />
+            </Input.Root>
           </form>
         </div>
       </section>

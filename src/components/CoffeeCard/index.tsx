@@ -24,7 +24,7 @@ export default function CoffeeCard({
           {tags.map((tag, index) => (
             <p
               key={String(index) + tag}
-              className="text-2xs rounded-xl bg-yellow-light p-1 px-2 font-roboto font-bold text-yellow-dark"
+              className="rounded-xl bg-yellow-light p-1 px-2 font-roboto text-2xs font-bold text-yellow-dark"
             >
               {tag.toUpperCase()}
             </p>
