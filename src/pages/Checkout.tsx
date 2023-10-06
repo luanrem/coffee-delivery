@@ -26,7 +26,7 @@ export default function Checkout() {
               <p className="text-lg font-bold">R$ 33,20</p>
             </div>
           </div>
-          <button className="h-12 rounded-md bg-yellow text-sm font-bold text-white">
+          <button className="h-12 rounded-md bg-yellow text-sm font-bold text-white transition-colors hover:bg-yellow/80">
             CONFIRMAR PEDIDO
           </button>
         </div>
