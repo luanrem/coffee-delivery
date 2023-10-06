@@ -1,6 +1,12 @@
 import { Input } from '@/components/Input'
 import SelectedCoffee from '@/components/SelectedCoffee'
-import { PiMapPinLineLight } from 'react-icons/pi'
+import {
+  PiMapPinLineLight,
+  PiCreditCard,
+  PiBank,
+  PiMoney,
+  PiCurrencyDollar,
+} from 'react-icons/pi'
 
 export default function Checkout() {
   return (
@@ -8,7 +14,7 @@ export default function Checkout() {
       <section className="flex w-160 flex-col gap-4">
         <h2 className="font-baloo text-lg font-bold">Complete seu pedido</h2>
         <div className="flex w-full flex-col gap-8 rounded-md bg-base-card p-10">
-          <div className="flex gap-2">
+          <div className="flex gap-1">
             <PiMapPinLineLight className="h-6 w-6 text-yellow-dark" />
             <div>
               <h3>Endereço de Entrega</h3>
@@ -45,6 +51,31 @@ export default function Checkout() {
               <Input.Control id="UF" type="text" placeholder="UF" />
             </Input.Root>
           </form>
+        </div>
+        <div className="flex w-full flex-col gap-8 rounded-md bg-base-card p-10">
+          <div className="flex gap-1">
+            <PiCurrencyDollar className="h-6 w-6 text-purple" />
+            <div>
+              <h3>Pagamento</h3>
+              <p className="text-sm">
+                O pagamento é feito na entrega. Escolha a forma que deseja pagar
+              </p>
+            </div>
+          </div>
+          <div className="flex justify-center gap-3">
+            <button className="flex h-12 w-48 items-center justify-center gap-3 rounded-md bg-base-button px-4 focus:border focus:border-purple focus:bg-purple-light">
+              <PiCreditCard className="text-purple" />
+              <p className="text-xs text-base-text">CARTÃO DE CRÉDITO</p>
+            </button>
+            <button className="flex h-12 w-48 items-center justify-center gap-3 rounded-md bg-base-button px-4 focus:border focus:border-purple focus:bg-purple-light">
+              <PiBank className="text-purple" />
+              <p className="text-xs text-base-text">CARTÃO DE DÉBITO</p>
+            </button>
+            <button className="flex h-12 w-48 items-center justify-center gap-3 rounded-md bg-base-button px-4 focus:border focus:border-purple focus:bg-purple-light">
+              <PiMoney className="text-purple" />
+              <p className="text-xs text-base-text">DINHEIRO</p>
+            </button>
+          </div>
         </div>
       </section>
       <section className="flex w-112 flex-col gap-4">
