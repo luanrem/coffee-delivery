@@ -1,8 +1,4 @@
 import coffeePresentation from '../assets/coffee-presentation.png'
-import IconHome1 from '@/components/icons/IconHome1'
-import IconHome2 from '@/components/icons/IconHome2'
-import IconHome3 from '@/components/icons/IconHome3'
-import IconHome4 from '@/components/icons/IconHome4'
 import CoffeeCard from '@/components/CoffeeCard'
 import { useGetCoffee } from '@/hooks/coffee'
 import Icon from '@/components/Icon'
