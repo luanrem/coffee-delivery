@@ -21,6 +21,7 @@ export default {
         'base-subtitle': '#403937',
         'base-title': '#272221',
         'base-button': '#E6E5E5',
+        'base-background': '#FAFAFA',
       },
       fontSize: {
         '2xs': '0.625rem',

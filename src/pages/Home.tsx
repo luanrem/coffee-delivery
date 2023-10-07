@@ -5,6 +5,13 @@ import IconHome3 from '@/components/icons/IconHome3'
 import IconHome4 from '@/components/icons/IconHome4'
 import CoffeeCard from '@/components/CoffeeCard'
 import { useGetCoffee } from '@/hooks/coffee'
+import Icon from '@/components/Icon'
+import {
+  PiCoffeeFill,
+  PiPackageFill,
+  PiShoppingCartFill,
+  PiTimerFill,
+} from 'react-icons/pi'
 
 export default function Home() {
   const { data: coffeeList, isFetching } = useGetCoffee()
@@ -25,19 +32,19 @@ export default function Home() {
           <br />
           <div className="flex flex-wrap gap-5">
             <div className="flex w-60 items-center gap-3 font-roboto text-base">
-              <IconHome1 />
+              <Icon icon={PiShoppingCartFill} className="bg-yellow-dark" />
               <p>Compra simples e segura</p>
             </div>
             <div className="flex items-center gap-3 font-roboto text-base">
-              <IconHome2 />
+              <Icon icon={PiPackageFill} className="bg-base-text" />
               <p>Embalagem mantém o café intacto</p>
             </div>
             <div className="flex w-60 items-center gap-3 font-roboto text-base">
-              <IconHome3 />
+              <Icon icon={PiTimerFill} className="bg-yellow" />
               <p>Entrega rápida e rastreada</p>
             </div>
             <div className="flex items-center gap-3 font-roboto text-base">
-              <IconHome4 />
+              <Icon icon={PiCoffeeFill} className="bg-purple" />
               <p>O Café chega fresquinho até você</p>
             </div>
           </div>
