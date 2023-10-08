@@ -14,18 +14,15 @@ export default function Home() {
 
   return (
     <>
-      <section className="mb-10 flex flex-wrap-reverse items-center justify-center gap-14 bg-home-section bg-contain px-32 pb-4 lg:mb-0 lg:h-[34rem] lg:flex-nowrap">
-        <div className="flex h-auto flex-col gap-4">
-          <h2 className="font-baloo text-5xl font-extrabold">
+      <section className="mb-5 mt-5 flex flex-wrap-reverse items-center justify-center gap-5 bg-home-section bg-contain px-5 pb-4 md:mt-0 md:gap-14 md:px-32 lg:mb-0 lg:h-[34rem] lg:flex-nowrap">
+        <div className="mb-5 flex h-auto flex-col gap-4">
+          <h2 className="text-center font-baloo text-3xl font-extrabold md:text-left md:text-5xl">
             Encontre o café perfeito para qualquer hora do dia
           </h2>
-          <p className="font-roboto text-xl">
+          <p className="mb-4 text-center font-roboto text-xl md:mb-24 md:text-left">
             Com o Coffee Delivery você recebe seu café onde estiver, a qualquer
             hora
           </p>
-          <br />
-          <br />
-          <br />
           <div className="flex flex-wrap gap-5">
             <div className="flex w-60 items-center gap-3 font-roboto text-base">
               <Icon icon={PiShoppingCartFill} className="bg-yellow-dark" />
@@ -48,14 +45,14 @@ export default function Home() {
         <img
           src={coffeePresentation}
           alt="coffee-example"
-          className="h-72 lg:h-96"
+          className="h-56 md:h-96"
         />
       </section>
-      <section className="flex h-auto flex-col items-start justify-start px-32 lg:flex-nowrap">
+      <section className="flex h-auto flex-col items-center justify-start px-5 md:items-start md:px-32 lg:flex-nowrap">
         <h2 className="font-baloo text-3xl font-extrabold">Nossos cafés</h2>
         <br />
         <br />
-        <div className="flex flex-wrap gap-8">
+        <div className="flex flex-wrap justify-center gap-8 md:justify-start">
           {isFetching ? (
             <h1>Loading</h1>
           ) : (

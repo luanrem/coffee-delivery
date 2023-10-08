@@ -6,7 +6,7 @@ import { HiMiniMapPin } from 'react-icons/hi2'
 export default function Header() {
   return (
     <>
-      <header className="flex h-24 items-center justify-between px-5 lg:px-32">
+      <header className="flex h-24 items-center justify-between px-5 md:px-32">
         <Link to={'/'}>
           <CoffeeLogo />
         </Link>
