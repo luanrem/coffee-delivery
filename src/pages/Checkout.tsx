@@ -10,10 +10,10 @@ import {
 
 export default function Checkout() {
   return (
-    <div className="flex flex-wrap gap-8 px-32">
-      <section className="flex w-160 flex-col gap-4">
+    <div className="flex flex-wrap gap-8 px-5 md:px-32">
+      <section className="flex w-full flex-col gap-4 md:w-160">
         <h2 className="font-baloo text-lg font-bold">Complete seu pedido</h2>
-        <div className="flex w-full flex-col gap-8 rounded-md bg-base-card p-10">
+        <div className="flex w-full flex-col gap-8 rounded-md bg-base-card p-5 md:p-10">
           <div className="flex gap-1">
             <PiMapPinLineLight className="h-6 w-6 text-yellow-dark" />
             <div>
@@ -52,7 +52,7 @@ export default function Checkout() {
             </Input.Root>
           </form>
         </div>
-        <div className="flex w-full flex-col gap-8 rounded-md bg-base-card p-10">
+        <div className="flex w-full flex-col gap-8 rounded-md bg-base-card p-5 md:p-10">
           <div className="flex gap-1">
             <PiCurrencyDollar className="h-6 w-6 text-purple" />
             <div>
@@ -62,25 +62,29 @@ export default function Checkout() {
               </p>
             </div>
           </div>
-          <div className="flex justify-center gap-3">
-            <button className="flex h-12 w-48 items-center justify-center gap-3 rounded-md bg-base-button px-4 focus:border focus:border-purple focus:bg-purple-light">
+          <div className="flex flex-wrap justify-center gap-3">
+            <button className="flex h-12 w-full items-center justify-center gap-3 rounded-md bg-base-button px-4 focus:border focus:border-purple focus:bg-purple-light md:w-48">
               <PiCreditCard className="text-purple" />
-              <p className="text-xs text-base-text">CARTÃO DE CRÉDITO</p>
+              <p className="text-base text-base-text md:text-xs">
+                CARTÃO DE CRÉDITO
+              </p>
             </button>
-            <button className="flex h-12 w-48 items-center justify-center gap-3 rounded-md bg-base-button px-4 focus:border focus:border-purple focus:bg-purple-light">
+            <button className="flex h-12 w-full items-center justify-center gap-3 rounded-md bg-base-button px-4 focus:border focus:border-purple focus:bg-purple-light md:w-48">
               <PiBank className="text-purple" />
-              <p className="text-xs text-base-text">CARTÃO DE DÉBITO</p>
+              <p className="text-base text-base-text md:text-xs">
+                CARTÃO DE DÉBITO
+              </p>
             </button>
-            <button className="flex h-12 w-48 items-center justify-center gap-3 rounded-md bg-base-button px-4 focus:border focus:border-purple focus:bg-purple-light">
+            <button className="flex h-12 w-full items-center justify-center gap-3 rounded-md bg-base-button px-4 focus:border focus:border-purple focus:bg-purple-light md:w-48">
               <PiMoney className="text-purple" />
-              <p className="text-xs text-base-text">DINHEIRO</p>
+              <p className="text-base text-base-text md:text-xs">DINHEIRO</p>
             </button>
           </div>
         </div>
       </section>
       <section className="flex w-112 flex-col gap-4">
         <h2 className="font-baloo text-lg font-bold">Cafés selecionados</h2>
-        <div className="flex w-full flex-col gap-6 rounded-md rounded-bl-[2.25rem] rounded-tr-[2.25rem] bg-base-card p-10">
+        <div className="flex w-full flex-col gap-6 rounded-md rounded-bl-[2.25rem] rounded-tr-[2.25rem] bg-base-card p-5 md:p-10">
           <SelectedCoffee />
           <SelectedCoffee />
           <SelectedCoffee />
