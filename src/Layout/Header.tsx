@@ -7,8 +7,6 @@ import { useCartStore } from '@/hooks/card'
 export default function Header() {
   const Cart = useCartStore((state) => state.cart)
 
-  console.log(Cart)
-
   return (
     <>
       <header className="flex h-24 items-center justify-between px-5 md:px-32">
