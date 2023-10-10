@@ -5,7 +5,7 @@ import { HiMiniMapPin } from 'react-icons/hi2'
 import { useCartStore } from '@/hooks/card'
 
 export default function Header() {
-  const Cart = useCartStore((state) => state.cart)
+  const cartList = useCartStore((state) => state.cartList)
   return (
     <>
       <header className="flex h-24 items-center justify-between px-5 md:px-32">
@@ -18,13 +18,13 @@ export default function Header() {
             <p className=" text-purple-dark ">Porto Alegre, RS</p>
           </button>
           <Link
-            to={Cart.length > 0 ? '/checkout' : ''}
+            to={cartList.length > 0 ? '/checkout' : ''}
             className="relative flex h-9 w-9 items-center justify-center rounded-md bg-yellow-light transition-colors hover:bg-yellow-light/70"
           >
             <CheckoutCar />
             <div className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-yellow-dark">
               <span className="font-roboto text-xs font-bold text-white">
-                {Cart.length}
+                {cartList.length}
               </span>
             </div>
           </Link>
