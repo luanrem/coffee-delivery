@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import CheckoutCar from '../icons/CheckoutCar'
 import { BiPlus, BiMinus } from 'react-icons/bi'
 
@@ -16,6 +17,15 @@ export default function CoffeeCard({
   tags,
   pictureUrl,
 }: CoffeeCardProps) {
+  const [quantity, setQuantity] = useState<number>(0)
+
+  const handleChangeQuantity = (value: number) => {
+    setQuantity((qnt) => {
+      const result = qnt + value
+      return result < 0 ? qnt : result
+    })
+  }
+
   return (
     <div className="mb-2 flex min-h-min w-64 flex-col items-center justify-between rounded-md rounded-bl-[36px] rounded-tr-[36px] bg-base-card">
       <div className="relative -top-6 flex flex-col items-center justify-start gap-3 px-5">
@@ -43,11 +53,17 @@ export default function CoffeeCard({
           </span>
         </div>
         <div className="flex h-10 items-center gap-1 rounded-md bg-base-button px-2">
-          <button className="flex items-center justify-center text-purple hover:text-purple-dark">
+          <button
+            onClick={() => handleChangeQuantity(-1)}
+            className="flex items-center justify-center text-purple hover:text-purple-dark"
+          >
             <BiMinus size="20" />
           </button>
-          <p className="font-roboto text-base">10</p>
-          <button className="flex items-center justify-center text-purple hover:text-purple-dark">
+          <p className="font-roboto text-base">{quantity}</p>
+          <button
+            onClick={() => handleChangeQuantity(1)}
+            className="flex items-center justify-center text-purple hover:text-purple-dark"
+          >
             <BiPlus size="20" />
           </button>
         </div>
