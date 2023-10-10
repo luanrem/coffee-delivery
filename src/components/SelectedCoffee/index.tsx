@@ -20,7 +20,7 @@ export default function SelectedCoffee() {
           <p className="font-bold">R$ 1000,90</p>
         </div>
       </div>
-      <tr className="h-[1px] bg-base-button" />
+      <hr className="h-[1px] bg-base-button" />
     </>
   )
 }
