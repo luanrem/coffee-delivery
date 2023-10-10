@@ -58,6 +58,7 @@ export default function Home() {
           ) : (
             coffeeList?.map((coffee) => (
               <CoffeeCard
+                id={coffee.id}
                 pictureUrl={coffee.pictureUrl}
                 name={coffee.name}
                 description={coffee.description}

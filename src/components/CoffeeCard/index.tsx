@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import CheckoutCar from '../icons/CheckoutCar'
 import { BiPlus, BiMinus } from 'react-icons/bi'
+import { useCartStore } from '@/hooks/card'
 
 interface CoffeeCardProps {
+  id: string
   name: string
   description: string
   value: number
@@ -11,6 +13,7 @@ interface CoffeeCardProps {
 }
 
 export default function CoffeeCard({
+  id,
   name,
   description,
   value,
@@ -18,12 +21,23 @@ export default function CoffeeCard({
   pictureUrl,
 }: CoffeeCardProps) {
   const [quantity, setQuantity] = useState<number>(0)
+  const addToCart = useCartStore((state) => state.addToCart)
 
   const handleChangeQuantity = (value: number) => {
     setQuantity((qnt) => {
       const result = qnt + value
       return result < 0 ? qnt : result
     })
+  }
+
+  const handleAddToCart = () => {
+    addToCart({
+      name,
+      price: value,
+      quantity,
+      id,
+    })
+    setQuantity(0)
   }
 
   return (
@@ -67,7 +81,10 @@ export default function CoffeeCard({
             <BiPlus size="20" />
           </button>
         </div>
-        <button className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-purple-dark transition-colors hover:bg-purple-dark/80">
+        <button
+          onClick={handleAddToCart}
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-purple-dark transition-colors hover:bg-purple-dark/80"
+        >
           <CheckoutCar color="white" />
         </button>
       </footer>

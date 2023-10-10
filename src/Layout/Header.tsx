@@ -2,8 +2,13 @@ import { Link, Outlet } from 'react-router-dom'
 import CoffeeLogo from '@/components/icons/CoffeeLogo'
 import CheckoutCar from '@/components/icons/CheckoutCar'
 import { HiMiniMapPin } from 'react-icons/hi2'
+import { useCartStore } from '@/hooks/card'
 
 export default function Header() {
+  const Cart = useCartStore((state) => state.cart)
+
+  console.log(Cart)
+
   return (
     <>
       <header className="flex h-24 items-center justify-between px-5 md:px-32">
@@ -19,7 +24,7 @@ export default function Header() {
             <CheckoutCar />
             <div className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-yellow-dark">
               <span className="font-roboto text-xs font-bold text-white">
-                3
+                {Cart.length}
               </span>
             </div>
           </button>
