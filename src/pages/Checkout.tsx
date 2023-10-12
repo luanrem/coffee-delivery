@@ -1,5 +1,6 @@
 import { Input } from '@/components/Input'
 import SelectedCoffee from '@/components/SelectedCoffee'
+import { useCartStore } from '@/hooks/card'
 import {
   PiMapPinLineLight,
   PiCreditCard,
@@ -9,6 +10,8 @@ import {
 } from 'react-icons/pi'
 
 export default function Checkout() {
+  const cartList = useCartStore((state) => state.cartList)
+
   return (
     <div className="flex flex-wrap gap-8 px-5 md:px-32">
       <section className="flex w-full flex-col gap-4 md:w-160">
@@ -85,9 +88,9 @@ export default function Checkout() {
       <section className="flex w-112 flex-col gap-4">
         <h2 className="font-baloo text-lg font-bold">Cafés selecionados</h2>
         <div className="flex w-full flex-col gap-6 rounded-md rounded-bl-[2.25rem] rounded-tr-[2.25rem] bg-base-card p-5 md:p-10">
-          <SelectedCoffee />
-          <SelectedCoffee />
-          <SelectedCoffee />
+          {cartList.map((item) => (
+            <SelectedCoffee name={item.name} imgSrc={item.id} key={item.id} />
+          ))}
 
           <div className="flex flex-col gap-3">
             <div className="flex justify-between">
