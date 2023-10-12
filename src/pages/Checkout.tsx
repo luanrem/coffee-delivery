@@ -89,12 +89,7 @@ export default function Checkout() {
         <h2 className="font-baloo text-lg font-bold">Cafés selecionados</h2>
         <div className="flex w-full flex-col gap-6 rounded-md rounded-bl-[2.25rem] rounded-tr-[2.25rem] bg-base-card p-5 md:p-10">
           {cartList.map((item) => (
-            <SelectedCoffee
-              price={item.price}
-              name={item.name}
-              imgSrc={item.pictureUrl}
-              key={item.id}
-            />
+            <SelectedCoffee item={item} key={item.id} />
           ))}
 
           <div className="flex flex-col gap-3">

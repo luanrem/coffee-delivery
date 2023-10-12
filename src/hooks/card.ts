@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 
-type Item = {
+export type Item = {
   id: string
   name: string
   price: number
@@ -12,6 +12,7 @@ type CartStore = {
   cartList: Item[]
   addToCart: (item: Item) => void
   removeFromCart: (id: string) => void
+  updateQuantity: (id: string, quantity: number) => void
 }
 
 export const useCartStore = create<CartStore>((set) => {
@@ -38,5 +39,17 @@ export const useCartStore = create<CartStore>((set) => {
       set((state) => ({
         cartList: state.cartList.filter((item) => item.id !== id),
       })),
+    updateQuantity: (id, quantity) =>
+      set((state) => {
+        const cartItemIndex = state.cartList.findIndex(
+          (cartItem) => cartItem.id === id,
+        )
+
+        if (cartItemIndex !== -1) {
+          state.cartList[cartItemIndex].quantity = Math.max(1, quantity)
+        }
+
+        return { cartList: [...state.cartList] }
+      }),
   }
 })
