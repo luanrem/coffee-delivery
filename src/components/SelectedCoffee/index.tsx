@@ -1,8 +1,9 @@
 import { ComponentProps } from 'react'
+import { twMerge } from 'tailwind-merge'
+import { Item, useCartStore } from '@/hooks/card'
+import { BRFormatter } from '@/utils/formatter'
 import QntButton from '../QntButton'
 import { PiTrash } from 'react-icons/pi'
-import { twMerge } from 'tailwind-merge'
-import { Item } from '@/hooks/card'
 
 type SelectedCoffeeType = ComponentProps<'div'> & {
   item: Item
@@ -13,10 +14,7 @@ export default function SelectedCoffee({
   item,
   ...props
 }: SelectedCoffeeType) {
-  const formatter = new Intl.NumberFormat('pt-BR', {
-    style: 'currency',
-    currency: 'BRL',
-  })
+  const removeFromCart = useCartStore((state) => state.removeFromCart)
 
   return (
     <>
@@ -33,13 +31,16 @@ export default function SelectedCoffee({
             {item.name}
           </p>
           <QntButton item={item} />
-          <button className="flex h-8 w-24 items-center justify-center gap-1 rounded-md bg-base-button hover:bg-base-button/70">
+          <button
+            onClick={() => removeFromCart(item.id)}
+            className="flex h-8 w-24 items-center justify-center gap-1 rounded-md bg-base-button hover:bg-base-button/70"
+          >
             <PiTrash className="h-4 w-4 text-purple" />
             <p className="text-xs">REMOVER</p>
           </button>
         </div>
         <div className="flex h-full flex-shrink-0 flex-grow justify-center md:justify-end">
-          <p className="font-bold">{formatter.format(item.price)}</p>
+          <p className="font-bold">{BRFormatter.format(item.price)}</p>
         </div>
       </div>
       <hr className="h-[1px] bg-base-button" />

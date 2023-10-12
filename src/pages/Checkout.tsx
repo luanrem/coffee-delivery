@@ -1,6 +1,7 @@
 import { Input } from '@/components/Input'
 import SelectedCoffee from '@/components/SelectedCoffee'
 import { useCartStore } from '@/hooks/card'
+import { BRFormatter } from '@/utils/formatter'
 import {
   PiMapPinLineLight,
   PiCreditCard,
@@ -10,7 +11,11 @@ import {
 } from 'react-icons/pi'
 
 export default function Checkout() {
-  const cartList = useCartStore((state) => state.cartList)
+  const [cartList, totalPrice, deliveryPrice] = useCartStore((state) => [
+    state.cartList,
+    state.totalPrice,
+    state.deliveryPrice,
+  ])
 
   return (
     <div className="flex flex-wrap gap-8 px-5 md:px-32">
@@ -95,15 +100,17 @@ export default function Checkout() {
           <div className="flex flex-col gap-3">
             <div className="flex justify-between">
               <p className="text-sm">Total de itens</p>
-              <p className="text-sm">R$ 29,70</p>
+              <p className="text-sm">{BRFormatter.format(totalPrice)}</p>
             </div>
             <div className="flex justify-between">
               <p className="text-sm">Entrega</p>
-              <p className="text-sm">R$ 3,50</p>
+              <p className="text-sm">{BRFormatter.format(deliveryPrice)}</p>
             </div>
             <div className="flex justify-between">
               <p className="text-lg font-bold">Total</p>
-              <p className="text-lg font-bold">R$ 33,20</p>
+              <p className="text-lg font-bold">
+                {BRFormatter.format(deliveryPrice + totalPrice)}
+              </p>
             </div>
           </div>
           <button className="h-12 rounded-md bg-yellow text-sm font-bold text-white transition-colors hover:bg-yellow/80">
