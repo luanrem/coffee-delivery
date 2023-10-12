@@ -6,14 +6,21 @@ import { twMerge } from 'tailwind-merge'
 type SelectedCoffeeType = ComponentProps<'div'> & {
   imgSrc: string
   name: string
+  price: number
 }
 
 export default function SelectedCoffee({
   className,
   imgSrc,
   name,
+  price,
   ...props
 }: SelectedCoffeeType) {
+  const formatter = new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL',
+  })
+
   return (
     <>
       <div
@@ -35,7 +42,7 @@ export default function SelectedCoffee({
           </button>
         </div>
         <div className="flex h-full flex-shrink-0 flex-grow justify-center md:justify-end">
-          <p className="font-bold">R$ 1000,90</p>
+          <p className="font-bold">{formatter.format(price)}</p>
         </div>
       </div>
       <hr className="h-[1px] bg-base-button" />

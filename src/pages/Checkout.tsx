@@ -90,6 +90,7 @@ export default function Checkout() {
         <div className="flex w-full flex-col gap-6 rounded-md rounded-bl-[2.25rem] rounded-tr-[2.25rem] bg-base-card p-5 md:p-10">
           {cartList.map((item) => (
             <SelectedCoffee
+              price={item.price}
               name={item.name}
               imgSrc={item.pictureUrl}
               key={item.id}
