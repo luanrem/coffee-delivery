@@ -5,6 +5,7 @@ type Item = {
   name: string
   price: number
   quantity: number
+  pictureUrl: string
 }
 
 type CartStore = {

@@ -36,6 +36,7 @@ export default function CoffeeCard({
       price: value,
       quantity,
       id,
+      pictureUrl,
     })
     setQuantity(0)
   }
