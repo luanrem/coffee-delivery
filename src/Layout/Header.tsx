@@ -8,7 +8,7 @@ export default function Header() {
   const cartList = useCartStore((state) => state.cartList)
   return (
     <>
-      <header className="flex h-24 items-center justify-between px-5 md:px-32">
+      <header className="sticky top-0 z-10 flex h-16 items-center justify-between bg-white px-5 md:px-32">
         <Link to={'/'}>
           <CoffeeLogo />
         </Link>
