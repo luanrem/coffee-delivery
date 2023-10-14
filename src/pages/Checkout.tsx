@@ -71,19 +71,19 @@ export default function Checkout() {
             </div>
           </div>
           <div className="flex flex-wrap justify-center gap-3">
-            <button className="flex h-12 w-full items-center justify-center gap-3 rounded-md bg-base-button px-4 focus:border focus:border-purple focus:bg-purple-light md:w-48">
+            <button className="flex h-12 w-full items-center justify-center gap-3 rounded-md bg-base-button px-4 focus:border focus:border-purple focus:bg-purple-light md:w-44">
               <PiCreditCard className="text-purple" />
               <p className="text-base text-base-text md:text-xs">
                 CARTÃO DE CRÉDITO
               </p>
             </button>
-            <button className="flex h-12 w-full items-center justify-center gap-3 rounded-md bg-base-button px-4 focus:border focus:border-purple focus:bg-purple-light md:w-48">
+            <button className="flex h-12 w-full items-center justify-center gap-3 rounded-md bg-base-button px-4 focus:border focus:border-purple focus:bg-purple-light md:w-44">
               <PiBank className="text-purple" />
               <p className="text-base text-base-text md:text-xs">
                 CARTÃO DE DÉBITO
               </p>
             </button>
-            <button className="flex h-12 w-full items-center justify-center gap-3 rounded-md bg-base-button px-4 focus:border focus:border-purple focus:bg-purple-light md:w-48">
+            <button className="flex h-12 w-full items-center justify-center gap-3 rounded-md bg-base-button px-4 focus:border focus:border-purple focus:bg-purple-light md:w-44">
               <PiMoney className="text-purple" />
               <p className="text-base text-base-text md:text-xs">DINHEIRO</p>
             </button>

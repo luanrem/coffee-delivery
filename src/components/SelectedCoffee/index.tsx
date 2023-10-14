@@ -30,14 +30,16 @@ export default function SelectedCoffee({
           <p className="w-full flex-grow text-center text-xl md:w-auto md:text-left">
             {item.name}
           </p>
-          <QntButton item={item} />
-          <button
-            onClick={() => removeFromCart(item.id)}
-            className="flex h-8 w-24 items-center justify-center gap-1 rounded-md bg-base-button hover:bg-base-button/70"
-          >
-            <PiTrash className="h-4 w-4 text-purple" />
-            <p className="text-xs">REMOVER</p>
-          </button>
+          <div className="flex gap-2">
+            <QntButton item={item} />
+            <button
+              onClick={() => removeFromCart(item.id)}
+              className="flex h-8 w-24 items-center justify-center gap-1 rounded-md bg-base-button hover:bg-base-button/70"
+            >
+              <PiTrash className="h-4 w-4 text-purple" />
+              <p className="text-xs">REMOVER</p>
+            </button>
+          </div>
         </div>
         <div className="flex h-full flex-shrink-0 flex-grow justify-center md:justify-end">
           <p className="font-bold">{BRFormatter.format(item.price)}</p>
