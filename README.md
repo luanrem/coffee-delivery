@@ -1,27 +1,67 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h1 align="center">
+  <br>
+  <a href="https://coffeedelivery.luanmartins.com"><img src="https://github.com/luanrem/coffee-delivery/assets/46967826/65cabf09-54f1-4271-99a2-9122eddd995a" alt="Markdownify" width="200"></a>
+  <br>
+  Coffee Delivery
+  <br>
+</h1>
 
-Currently, two official plugins are available:
+<h4 align="center">A project of coffee store made in React as a <a href="https://www.rocketseat.com.br/ignite" target="_blank">Rocketseat Ignite</a> Lesson.</h4>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<p align="center">
+  <a href="https://coffeedelivery.luanmartins.com">
+    <img src="https://img.shields.io/github/languages/top/luanrem/coffee-delivery"
+         alt="Gitter">
+  </a>
+  <a href="https://coffeedelivery.luanmartins.com"><img src="https://img.shields.io/github/languages/count/luanrem/coffee-delivery"></a>
+  <a href="https://saythanks.io/to/luanrem@gmail.com">
+      <img src="https://img.shields.io/github/last-commit/luanrem/coffee-delivery">
+  </a>
+  <a href="https://www.repostatus.org/#wip">
+    <img src="https://img.shields.io/github/license/x0n4d0/ecoleta">
+  </a>
+</p>
 
-## Expanding the ESLint configuration
+<p align="center">
+  <a href="#key-features">Key Features</a> •
+  <a href="#preview">Preview</a> •
+  <a href="#credits">Credits</a> •
+  <a href="#license">License</a>
+</p>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+![screenshot](https://github.com/luanrem/coffee-delivery/assets/46967826/a7fe2c67-0511-4992-919c-24f851636e95)
 
-- Configure the top-level `parserOptions` property like this:
+## Key Features
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+* See all coffees we have in store
+* Add to the cart
+* Open cart, add or remove the quantity
+* Put all your data
+* Mobile ready
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+## Preview
+
+You can view direct on this website: [coffeedelivery.luanmartins.com](https://coffeedelivery.luanmartins.com)
+
+## Credits
+
+This software uses the following open source packages:
+
+- [ReactJs](https://react.dev)
+- [React Router](https://reactrouter.com/en/main)
+- [Tailwind](https://tailwindcss.com)
+- [Zustand](https://zustand-demo.pmnd.rs)
+- [Rocketseat ESLint rules](https://github.com/Rocketseat/eslint-config-rocketseat)
+- [Vite](https://vitejs.dev)
+
+## License
+
+MIT
+
+---
+
+> [luanmartins.com](https://www.luanmartins.com) &nbsp;&middot;&nbsp;
+> GitHub [@luanrem](https://github.com/luanrem) &nbsp;&middot;&nbsp;
+> Linkedin [@luanrem](www.linkedin.com/in/luanrem)
